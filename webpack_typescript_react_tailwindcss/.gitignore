@@ -1,0 +1,4 @@
+/node_modules
+
+# 번들링 결과물
+/dist
