@@ -8,14 +8,15 @@ import "@src/style/tailwind.css";
 import App from "@src/components/App";
 
 const container = document.getElementById("root");
-const root = createRoot(container!);
 
-root.render(
-  <>
+if (container instanceof HTMLElement) {
+  const root = createRoot(container);
+
+  root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
       </Routes>
-    </BrowserRouter>
-  </>
-);
+    </BrowserRouter>,
+  );
+}
